@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>ProjetJPA</display-name>
+
+	<!-- Titre de l'application -->
+	<context-param>
+		<param-name>title</param-name>
+		<param-value>Projet JPA</param-value>
+	</context-param>
+
+	<!-- URLs communes aux vues -->
+	<context-param>
+		<param-name>entetedepage</param-name>
+		<param-value>/WEB-INF/JSP/commun/entetedepage.jsp</param-value>
+	</context-param>
+	<context-param>
+		<param-name>pieddepage</param-name>
+		<param-value>/WEB-INF/JSP/commun/pieddepage.jsp</param-value>
+	</context-param>
+	
+
+
+	<!--========= Projet Etape 3 MVC =========== -->
+	<!-- Servlet controleur -->
+	<servlet>
+		<servlet-name>controleur</servlet-name>
+		<servlet-class>projet.controleur.Controleur</servlet-class>
+		<init-param>
+			<param-name>urlEtudiants</param-name>
+			<param-value>/WEB-INF/JSP/etudiants.jsp</param-value>
+		</init-param>
+		<init-param>
+			<param-name>urlGroupes</param-name>
+			<param-value>/WEB-INF/JSP/groupes.jsp</param-value>
+		</init-param>
+		<init-param>
+			<param-name>urlDetails</param-name>
+			<param-value>/WEB-INF/JSP/details.jsp</param-value>
+		</init-param>
+		<init-param>
+			<param-name>urlEditS</param-name>
+			<param-value>/WEB-INF/JSP/editS.jsp</param-value>
+		</init-param>
+		<init-param>
+			<param-name>urlSaveS</param-name>
+			<param-value>/WEB-INF/JSP/saveS.jsp</param-value>
+		</init-param>
+		<init-param>
+			<param-name>urlEditMark</param-name>
+			<param-value>/WEB-INF/JSP/editMark.jsp</param-value>
+		</init-param>
+		<init-param>
+			<param-name>urlAddMark</param-name>
+			<param-value>/WEB-INF/JSP/addMark.jsp</param-value>
+		</init-param>
+		<init-param>
+			<param-name>urlShowStdtGrps</param-name>
+			<param-value>/WEB-INF/JSP/ShowStdtGrps.jsp</param-value>
+		</init-param>
+		<init-param>
+			<param-name>urlSetGrpNotes</param-name>
+			<param-value>/WEB-INF/JSP/setGrpNotes.jsp</param-value>
+		</init-param>
+		<init-param>
+			<param-name>urlAddEtu</param-name>
+			<param-value>/WEB-INF/JSP/addEtu.jsp</param-value>
+		</init-param>
+	</servlet>
+
+	<!-- Mapping URL/Servlet -->
+	<servlet-mapping>
+		<servlet-name>controleur</servlet-name>
+		<url-pattern>/do/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- fichiers d'accueil -->
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

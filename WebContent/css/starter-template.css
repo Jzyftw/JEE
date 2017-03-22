@@ -1,0 +1,49 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.titretab {
+	text-size:5px;
+	display : inline-block;
+}
+
+.tabEtu {
+	display: inline-table;
+	margin-top: 30px;
+}
+
+.note {
+	width:60px;
+}
+
+.etudiants {
+	display: inline-grid;
+	background-color: chartreuse;
+	border-radius: 5px 5px;
+	width: 200px;
+	height : 150px;
+	padding: 10px;
+	margin: 5px;
+	font-size: 16px;
+}
+
+.titretab h2 {
+	padding-left : 10px;
+}
+
+
+th {
+	padding-right: 10px;
+}
+
+form, h1 {
+	text-align:center;
+}
+
+.conteneur {
+	text-align:center;
+}
